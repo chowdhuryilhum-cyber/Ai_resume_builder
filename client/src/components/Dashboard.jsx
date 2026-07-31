@@ -1,0 +1,6 @@
+import { useEffect, useState } from 'react';
+export function Dashboard({ user, onNew, onEdit, onLogout }) {
+  const [items, setItems] = useState([]); const [error, setError] = useState('');
+  useEffect(() => { fetch('/api/resumes', { credentials: 'include' }).then(r => r.json()).then(p => setItems(p.data || [])).catch(() => setError('Could not load saved resumes.')); }, []);
+  return <main className="dashboard"><div className="dashboard-head"><div><p className="eyebrow">YOUR WORKSPACE</p><h1>Hello, {user.name.split(' ')[0]}.</h1><p>Create, edit, and download your professional resumes.</p></div><button className="primary" onClick={onNew}>+ Create a resume</button></div>{error && <p className="auth-error">{error}</p>}<section className="resume-list">{items.length ? items.map(item => <article className="resume-card" key={item.id}><span>RESUME</span><h2>{item.title}</h2><p>Updated {new Date(item.updated_at).toLocaleDateString()}</p><button className="link" onClick={() => onEdit(item.id)}>Open editor →</button></article>) : <div className="empty"><h2>Your first resume starts here.</h2><p>Create a draft and ResumeCraft will save it to your account.</p><button className="primary" onClick={onNew}>Create my first resume</button></div>}</section><button className="logout link" onClick={onLogout}>Log out</button></main>;
+}

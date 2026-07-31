@@ -1,0 +1,21 @@
+{
+  "title": "Ilhum ul hoque — Resume",
+  "targetRole": "Frontend Developer Intern",
+  "template": "modern",
+  "accent": "#4f46e5",
+  "personal": {
+    "name": "Ilhum ul hoque",
+    "title": "Computer Science Student",
+    "email": "ilhum@email.com",
+    "phone": "+880 1700 000000",
+    "location": "Dhaka, Bangladesh",
+    "linkedin": "linkedin.com/in/ilhumulhoque",
+    "github": "github.com/ilhumulhoque",
+    "portfolio": "ilhumulhoque.dev"
+  },
+  "summary": "Computer Science student building accessible web applications with React and Node.js. Interested in frontend engineering internships where thoughtful user experiences and clean implementation matter.",
+  "skills": ["JavaScript", "React", "Node.js", "HTML/CSS", "Git"],
+  "education": [{ "id": "education-1", "school": "University of Dhaka", "degree": "BSc", "field": "Computer Science", "start": "2022-01", "end": "2026-01", "gpa": "3.75", "description": "Relevant coursework: Data Structures, Web Engineering." }],
+  "projects": [{ "id": "project-1", "name": "Campus Connect", "url": "github.com/ilhumulhoque/campus-connect", "tech": "React, Node.js, SQLite", "description": "Built a student collaboration app with project listings and a responsive interface." }],
+  "research": [], "activities": [], "languages": [{ "id": "lang-1", "name": "Bangla", "level": "Native" }, { "id": "lang-2", "name": "English", "level": "Professional working proficiency" }]
+}
